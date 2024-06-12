@@ -91,12 +91,18 @@ if menu == "Gallery 1":
         
     cols = st.columns(2)
     with cols[0]:
-        video_file = open('7.mp4', 'rb')
-        video_bytes = video_file.read()
-        st.video(video_bytes)
+        try:
+            video_file = open('7.mp4', 'rb')
+            video_bytes = video_file.read()
+            st.video(video_bytes)
+        except Exception as e:
+            st.error(f" Erro ao carregar o video 7.mp4: {e}")
     with cols[1]:
-        video_file = open('video10.mp4', 'rb')
-        video_bytes = video_file.read()
-        st.video(video_bytes)
+        try:
+            video_file = open('video10.mp4', 'rb')
+            video_bytes = video_file.read()
+            st.video(video_bytes)
+        except Exception as e:
+            st.error(f" Erro ao carregar o video10.mp4: {e}")
 
 st.markdown('</div>', unsafe_allow_html=True)
