@@ -92,7 +92,7 @@ if menu == "Gallery 1":
     cols = st.columns(2)
     with cols[0]:
         try:
-            video_file = open('7.mp4', 'rb')
+            video_file = open('PortfolioLefaun_new/7.mp4', 'rb')
             video_bytes = video_file.read()
             st.video(video_bytes)
         except Exception as e:
